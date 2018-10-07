@@ -1,0 +1,204 @@
+decisions = {
+	employ_diplomat = {	#Employ a Diplomat
+		potential = {
+			ai = no
+		}
+		allow = {
+			scaled_wealth = 0.2
+		}
+		effect = {
+			scaled_wealth = -0.2
+			create_random_diplomat = {
+				random_traits = yes
+				dynasty = random
+				female = no
+				age = 25
+				health = 5
+				fertility = 0.6
+			}
+			new_character = {
+				hidden_tooltip = {
+					proper_character_effect = yes
+					save_event_target_as = recruit
+				}
+			}
+			character_event = {
+				id = 4
+			}
+		}
+	}
+	employ_soldier = {	#Employ a Soldier
+		potential = {
+			ai = no
+		}
+		allow = {
+			scaled_wealth = 0.2
+		}
+		effect = {
+			scaled_wealth = -0.2
+			create_random_soldier = {
+				random_traits = yes
+				dynasty = random
+				female = no
+				age = 25
+				health = 5
+				fertility = 0.6
+			}
+			new_character = {
+				hidden_tooltip = {
+					proper_character_effect = yes
+					save_event_target_as = recruit
+				}
+			}
+			character_event = {
+				id = 4
+			}
+		}
+	}
+	employ_steward = {	#Employ a Steward
+		potential = {
+			ai = no
+		}
+		allow = {
+			scaled_wealth = 0.2
+		}
+		effect = {
+			scaled_wealth = -0.2
+			create_random_steward = {
+				random_traits = yes
+				dynasty = random
+				female = no
+				age = 25
+				health = 5
+				fertility = 0.6
+			}
+			new_character = {
+				hidden_tooltip = {
+					proper_character_effect = yes
+					save_event_target_as = recruit
+				}
+			}
+			character_event = {
+				id = 4
+			}
+		}
+	}
+	employ_intriguer = {	#Employ a Spy
+		potential = {
+			ai = no
+		}
+		allow = {
+			scaled_wealth = 0.2
+		}
+		effect = {
+			scaled_wealth = -0.2
+			create_random_intriguer = {
+				random_traits = yes
+				dynasty = random
+				female = no
+				age = 25
+				health = 5
+				fertility = 0.6
+			}
+			new_character = {
+				hidden_tooltip = {
+					proper_character_effect = yes
+					save_event_target_as = recruit
+				}
+			}
+			character_event = {
+				id = 4
+			}
+		}
+	}
+	employ_learnedman = {	#Employ Learnedman
+		potential = {
+			ai = no
+		}
+		allow = {
+			scaled_wealth = 0.2
+		}
+		effect = {
+			scaled_wealth = -0.2
+			create_random_priest = {
+				random_traits = yes
+				dynasty = random
+				female = no
+				age = 25
+				health = 5
+				fertility = 0.6
+			}
+			new_character = {
+				hidden_tooltip = {
+					proper_character_effect = yes
+					save_event_target_as = recruit
+				}
+			}
+			character_event = {
+				id = 4
+			}
+		}
+	}
+	employ_woman = {	#Employ a Woman
+		potential = {
+			ai = no
+		}
+		allow = {
+			scaled_wealth = 0.2
+		}
+		effect = {
+			scaled_wealth = -0.2
+			create_character = {
+				random_traits = yes
+				female = yes
+				dynasty = random
+				age = 25
+				health = 5
+				fertility = 0.6
+			}
+			new_character = {
+				hidden_tooltip = {
+					proper_character_effect = yes
+					save_event_target_as = recruit
+				}
+			}
+			character_event = {
+				id = 4
+			}
+		}
+	}
+	employ_medicus = {	#Employ a Doctor
+		potential = {
+			NOT = {
+				any_courtier = { trait = is_medicus }
+			}
+		}
+		allow = {
+			scaled_wealth = 0.2
+		}
+		effect = {
+			scaled_wealth = -0.2
+			create_random_priest = {
+				random_traits = yes
+				dynasty = random
+				female = no
+				trait = is_medicus
+				age = 40
+				health = 5
+				fertility = 0.6
+			}
+			new_character = {
+				hidden_tooltip = {
+					proper_character_effect = yes
+					save_event_target_as = recruit
+				}
+			}
+			character_event = {
+				id = 4
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

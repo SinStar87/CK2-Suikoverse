@@ -1,0 +1,83 @@
+decisions = {
+	form_hunt_dec = {	#Go on Hunt
+		is_high_prio = yes
+		potential = {
+			is_ruler = yes
+			independent = yes
+			NOR = {
+				has_character_flag = went_on_hunt
+				trait = on_quest
+			}
+		}
+		allow = {
+			war = no
+			in_command = no
+			prisoner = no
+		}
+		effect = {
+			set_character_flag = went_on_hunt
+			character_event = { id = goshen_hunt_events.2 days = 3 }
+			hidden_effect = {
+				any_courtier_or_vassal = {
+					limit = {
+						OR = {
+							has_job_title = job_marshal
+							has_minor_title = title_commander
+						}
+						NOT = { trait = on_quest }
+					}
+					character_event = { id = goshen_hunt_events.1 }
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0.1
+		}
+	}
+	form_feast_dec = {	#Host a Feast
+		is_high_prio = yes
+		potential = {
+			is_ruler = yes
+			NOT = { has_character_flag = feast_setup }
+			NOT = { has_character_flag = hosting_feast }
+			NOT = { has_character_flag = feast_started }
+			NOT = { has_character_flag = hosted_feast }
+			OR = {
+				NOT = { has_any_opinion_modifier = opinion_join_feast }
+				had_character_flag = { flag = hosted_feast years = 10 }
+			}
+			OR = {
+				independent = yes
+				liege = {
+					NOR = {
+						has_character_flag = feast_setup
+						has_character_flag = hosting_feast
+						has_character_flag = feast_started
+						has_any_opinion_modifier = opinion_join_feast
+					}
+				}
+				top_liege = {
+					NOR = {
+						has_character_flag = feast_setup
+						has_character_flag = hosting_feast
+						has_character_flag = feast_started
+						has_any_opinion_modifier = opinion_join_feast
+					}
+				}
+			}
+		}
+		allow = {
+			war = no
+			in_command = no
+			prisoner = no
+			wealth = 200
+		}
+		effect = {
+			set_character_flag = feast_setup
+			character_event = { id = goshen_feast_events.0 days = 1 }
+		}
+		ai_will_do = {
+			factor = 0.1
+		}
+	}
+}
