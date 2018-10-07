@@ -1,0 +1,63 @@
+#General Opinions
+opinion_loyal = {
+	opinion = 15
+}
+opinion_disloyal = {
+	opinion = -15
+}
+
+#Hunt Opinions
+opinion_joined_hunt = {
+	opinion = 15
+}
+opinion_refused_hunt = {
+	opinion = -20
+}
+
+#Feast Opinions
+opinion_join_feast = {
+	opinion = 0
+}
+opinion_refuse_feast = {
+	opinion = 0
+}
+opinion_refused_feast = {
+	opinion = -15
+}
+opinion_enjoyed_feast = {
+	opinion = 15
+}
+opinion_hated_feast = {
+	opinion = -15
+}
+opinion_fst_friend = {
+	opinion = 25
+}
+opinion_sexed = {
+	opinion = 25
+}
+
+#Killer Opinions
+opinion_killed_family = {
+	opinion = -50
+}
+opinion_killed_rival = {
+	opinion = 25
+}
+opinion_killed_friend = {
+	opinion = -30
+}
+opinion_killed_liege = {
+	opinion = -25
+}
+
+#Guard Opinions
+opinion_commander = {
+	opinion = 10
+}
+opinion_charge = {
+	opinion = 5
+}
+opinion_refused_guard = {
+	opinion = -10
+}
